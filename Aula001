@@ -1,0 +1,9 @@
+Coletando a data e transformando os dados  de inteiros para Varchar e renomeando a tabela
+
+SELECT CAST(day(getdate()) AS VARCHAR) + '/' + CAST(month(getdate()) AS VARCHAR) + CAST(year(getdate()) AS VARCHAR) AS "DATA ATUAL";
+
+---
+
+SELECT COUNT(*), 'Quantidade de Produtos', SUM (OrderQty) 'Total de Produtos
+Vendidos',COUNT(DISTINCT productid) 'total de produtos vendidos'
+FROM Sales.salesOrderDetail;
