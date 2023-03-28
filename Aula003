@@ -61,6 +61,17 @@ Podemos utilizar o operador OR(ou) da seguinte forma
 
 
 
+ex:
+
+
+SELECT *
+FROM produtos
+WHERE marca = 'DELL' OR marca = 'SAMSUNG'
+
+
+
+
+
 
 
 
