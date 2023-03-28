@@ -1,0 +1,38 @@
+PRIMEIRAS CONSULTAS EM SQL
+
+CONSULTANDO TODAS AS COLUNAS DE UMA TABELA
+
+SELECT * 
+FROM (nome da tabela); -> Finaliza a sintaxe
+
+CONSULTANDO APENAS AS COLUNAS DESEJADAS
+
+SELECT (primeria coluna), (segunda coluna)
+FROM (nome da tabela);
+
+SELECIONANDO COLUNAS ESPECIFICAS E AS NOMEANDO
+
+SELECT (coluna1) AS 'nome desejado', (coluna2) AS 'nome desejado'
+FROM (nome da tabela);
+
+SELECIONANDO UMA TABELA, LIMITANDO AS COLUNAS
+
+SELECT *
+FROM (nome da tabela)
+LIMIT (quantia desejada(ex: 2));
+
+COMANDO ORDER BY
+
+ORDENANDO UMA CONSULTA ATRAVES DO ORDER BY SELECIONANDO UMA COLUNA DE INICIO
+
+SELECT *
+FROM (nome da tabela)
+ORDER BY (nome da coluna);
+
+TAMBEM PODEMOS INVERTER ESSA ORDEM, SELECIONANDO DO MAIOR POR MENOR DA SEGUINTE FORMA
+
+SELECT *
+FROM (nome da tabela)
+ORDER BY (nome da coluna) DESC; -> Note o comando DESC
+
+OBS.. PARA COMENTAR EM SQL USAMOS "-- TEXTO --"
