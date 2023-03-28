@@ -1,9 +1,15 @@
-Coletando a data e transformando os dados  de inteiros para Varchar e renomeando a tabela
+O QUE É UM BANCO DE DADOS?
+Um banco de dados é a união de varias tabelas, tabelas que por sua vez são formadas por um conjunto de dados.
+Já um dado, é uma informação referente a algo
 
-SELECT CAST(day(getdate()) AS VARCHAR) + '/' + CAST(month(getdate()) AS VARCHAR) + CAST(year(getdate()) AS VARCHAR) AS "DATA ATUAL";
+BANCO DE DADOS RELACIONAL
+Possui tabelas que se relacionam de alguma forma
 
----
+SQL É UMA LINGUAGEM DE PROGRAMAÇÃO CRIADA PARA MANIPULAR DADOS EM UM BANCO DE DADOS, SE COMUNICANDO COM ELE
+ARMAZENA, CONSULTA, ADICIONA E EXCLUI INFORMAÇÕES EM UM BANCO DE DADOS
 
-SELECT COUNT(*), 'Quantidade de Produtos', SUM (OrderQty) 'Total de Produtos
-Vendidos',COUNT(DISTINCT productid) 'total de produtos vendidos'
-FROM Sales.salesOrderDetail;
+O QUE É UMA QUERY?
+Uma query é uma consulta ao banco de dados
+
+
+
