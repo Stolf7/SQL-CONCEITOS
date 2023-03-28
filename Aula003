@@ -1,0 +1,67 @@
+FILTROS EM SQL UTILIZANDO O WHERE 
+
+PARA FILTRAR UMA COLUNA DE NUMEROS FAZEMOS DA SEGUINTE FORMA
+
+SELECT *
+FROM (nome da tabela)
+WHERE (nome da coluna) >, <, >=, <= a uma condição númerica;
+
+ex:
+
+SELECT *
+FROM produtos
+WHERE preços > 1000;
+
+
+PARA FILTRARMOS TEXTO, FAZEMOS DA SEGUINTE FORMA
+
+SELECT *
+FROM (nome da tabela)
+WHERE (nome da coluna) = 'string';
+
+ex:
+
+SELECT *
+FROM produtos
+WHERE nome_produto = 'DELL';
+
+
+
+PARA FILTRAR DATAS
+
+SELECT *
+FROM (nome da tabela)
+WHERE (nome da coluna) = 'YYYY-MM-DD'; -> Formato Americano
+
+ex:
+
+SELECT *
+FROM (nome da tabela)
+WHERE (nome da coluna) = '2032-MM-DD'; 
+
+
+COMO EU PODERIA APLICAR MAIS DE UM FILTRO AO MESMO TEMPO?
+
+Podemos usar os operadores AND e OR
+
+SELECT *
+FROM (nome da tabela)
+WHERE (nome da tabela) = 'string' AND (nome da tabela) = (condição numerica);
+
+
+ex:
+
+SELECT *
+FROM clientes
+WHERE Estado_Civil = 'Solteiro' AND Sexo = 'Masculino' AND idade = '20;
+
+
+
+Podemos utilizar o operador OR(ou) da seguinte forma
+
+
+
+
+
+
+
