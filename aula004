@@ -1,0 +1,53 @@
+FUNÇÕES DE AGREGAÇÃO ->
+Permitem realizar calculos no SQL
+
+FUNÇÃO COUNT 
+
+SELECT COUNT(nome da coluna)
+FROM (nome da tabela);
+
+ex: 
+SELECT COUNT nomes
+FROM funcionarios;
+
+OBS.. o comando COUNT ignora os valores nulos da tabela, então usamos COUNT(*) -> para considerar os valores nulos, contando
+todas as linhas
+
+OBS.. podemos utilizar o comando distinct com o count para distinguir os itens difernetes e exibir a quantia de não iguais 
+ex: COUNT(DISTINCT nome da coluna)
+
+
+
+
+FUNÇÃO SUM -> RETORNA A SOMA DA COLUNA 
+
+SELECT SUM(nome da coluna)
+FROM (nome da tabela);
+
+
+
+FUNÇÃO AVG -> RETORNA A MEDIA DA COLUNA
+
+SELECT AVG(nome da coluna)
+FROM (nome da tabela);
+
+
+
+FUNÇÃO MIN -> RETORNA VALOR MINIMO DE UMA COLUNA
+
+SELECT MIN(nome da coluna)
+FROM (nome da tabela);
+
+
+
+FUNÇÃO MAX -> RETORNA VALOR MAXIMO DE UMA COLUNA
+
+SELECT MAX(nome da coluna)
+FROM (nome da tabela);
+
+
+
+
+
+
+
