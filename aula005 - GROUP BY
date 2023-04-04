@@ -1,0 +1,23 @@
+COMANDO GROUP BY -> SERVE PARA AGRUPAR TABELAS
+
+
+SELECT nome da coluna 
+FROM nome da coluna
+GROUP BY nome da coluna
+
+ex:
+
+SELECT sexo, COUNT(*) AS 'Quantidade de clientes'
+FROM clientes
+GROUP BY sexo;
+
+SELECT 
+	ProductID,
+	COUNT(*) AS ' Vendida',
+	SUM(UnitPrice) AS 'Valor Vendido'
+FROM Purchasing.PurchaseOrderDetail
+GROUP BY ProductID
+ORDER BY ProductID;
+
+SELECT * FROM Purchasing.PurchaseOrderDetail;
+
