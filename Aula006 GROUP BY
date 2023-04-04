@@ -1,0 +1,9 @@
+SELECT 
+	ProductID,
+	COUNT(*) AS ' Vendida',
+	SUM(UnitPrice) AS 'Valor Vendido'
+FROM Purchasing.PurchaseOrderDetail
+GROUP BY ProductID
+ORDER BY ProductID;
+
+SELECT * FROM Purchasing.PurchaseOrderDetail;
