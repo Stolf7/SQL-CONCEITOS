@@ -37,5 +37,14 @@ SELECT DATEADD(year, +10,GETDATE());
 
 SELECT CONVERT(date, DATEADD(year, +1, GETDATE())); -> REMOVE HORAS E SEGUNDOS
 
-OBS, podemos adicionar meses, dias ou anos conforme exemplo
+OBS, podemos adicionar horas, meses, dias ou anos conforme exemplo
+
+
+
+------------------------------------------------------------------------------
+DATEDIFF -> CALCULCA INTERVALO ENTRE DATAS
+
+SELECT DATEDIFF(year, GETDATE(), DATEADD(year, +10, GETDATE()));
+
+SELECT DATEDIFF(hour, '11/12/2002', GETDATE()) AS 'Horas de vida';
 
