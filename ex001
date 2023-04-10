@@ -1,0 +1,5 @@
+1 - 
+SELECT FirstName AS "Nome", LastName AS "Sobrenome", BusinessEntityID AS "Id do Cargo"
+FROM Person.Person;
+
+2 -
