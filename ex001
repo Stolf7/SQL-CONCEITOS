@@ -36,5 +36,10 @@ FROM Production.Product
 WHERE Name LIKE 'F%' OR Name LIKE 'G%' OR Name LIKE 'L%';
 
 6 -
+SELECT ProductID,
 
+	Sum(OrderQty * UnitPrice) AS 'Total'
+
+FROM Sales.SalesOrderDetail
+GROUP BY ProductID;
 
