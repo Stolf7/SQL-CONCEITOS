@@ -1,5 +1,22 @@
 1 - 
-SELECT FirstName AS "Nome", LastName AS "Sobrenome", BusinessEntityID AS "Id do Cargo"
-FROM Person.Person;
+SELECT p.FirstName, p.LastName, d.DepartmentId
+From Person.Person p INNER JOIN HumanResources.Employee e
+		ON p.BusinessEntityID=e.BusinessEntityID
+	INNER JOIN HumanResources.EmployeeDepartmentHistory ed
+		ON e.BusinessEntityID=ed.BusinessEntityID
+	INNER JOIN HumanResources.Department d
+		ON d.DepartmentID=ed.DepartmentID
+WHERE d.Name='Sales';
 
 2 -
+SELECT p.BusinessEntityID, p.FirstName, p.LastName, CountryRegionCode
+FROM Person.Person AS p INNER JOIN Person.BusinessEntityAddress AS pbe
+		ON p.BusinessEntityID = pbe.BusinessEntityID
+	INNER JOIN Person.Address AS a
+		ON a.AddressID = pbe.AddressID
+	INNER JOIN Person.StateProvince AS psp
+		ON psp.StateProvinceID = a.StateProvinceID
+WHERE psp.CountryRegionCode = 'FR';
+
+3 -
+
