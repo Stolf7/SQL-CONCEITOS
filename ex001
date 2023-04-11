@@ -19,4 +19,22 @@ FROM Person.Person AS p INNER JOIN Person.BusinessEntityAddress AS pbe
 WHERE psp.CountryRegionCode = 'FR';
 
 3 -
+SELECT FirstName
+FROM Person.Person
+WHERE FirstName LIKE '__A' 
+ AND FirstName NOT LIKE '%P%'
+ AND FirstName NOT LIKE '%Q%'
+ AND FirstName NOT LIKE '%R%'
+ AND FirstName NOT LIKE '%S%';
+ 
+4 - 
+----------
+
+5 - 
+SELECT Name, ProductID
+FROM Production.Product
+WHERE Name LIKE 'F%' OR Name LIKE 'G%' OR Name LIKE 'L%';
+
+6 -
+
 
