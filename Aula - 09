@@ -1,0 +1,50 @@
+1) Qual o nome do produto mais caro vendido pela empresa?
+
+USE AdventureWorks2012
+
+SELECT MAX(ListPrice) 
+FROM Production.Product;
+
+---
+
+SELECT name
+FROM Production.Product
+WHERE ListPrice = 3578.27;
+
+
+VAMOS JUNTAR AS DUAS? VAI QUE O PREÇO AUMENTA NÃO É?
+
+SELECT name -- CONSULTA EXTERNA --
+FROM Production.Product
+WHERE ListPrice = 
+	(SELECT MAX(ListPrice) -- CONSULTA INTERNA --
+	FROM Production.Product);
+
+
+-----
+
+2) (Subconsulta Multivalorada)
+
+Listar o nome das pessoas que são funcionarias.
+
+SELECT BusinessEntityID
+FROM HumanResources.Employees
+
+MAS DAI EU CONSIGO O CODIGO DELES NE? EU QUERO O NOME!!!
+
+SELECT BusinessEntityID, FirstName, LastName
+FROM Person.Person
+WHERE BusinessEntityID IN 
+	(SELECT BusinessEntityID
+	 FROM HumanResources.Employees)
+   
+----
+
+3) AGORA EU QUERO EXIBIR O NOME DAS PESSOAS QUE NAO SAO FUNCIONARIAS
+SELECT BusinessEntityID, FirstName, LastName
+FROM Person.Person
+WHERE BusinessEntityID NOT IN 
+	(SELECT BusinessEntityID
+	 FROM HumanResources.Employees)
+
+É SO COLOCAR O NOT IN !!!!
