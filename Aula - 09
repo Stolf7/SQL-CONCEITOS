@@ -48,3 +48,13 @@ WHERE BusinessEntityID NOT IN
 	 FROM HumanResources.Employees)
 
 É SO COLOCAR O NOT IN !!!!
+
+4) AGORA EU QUERO EXIBIR O NOME DAS PESSOAS QUE NAO SAO FUNCIONARIAS E NAO SAO CLIENTES
+SELECT BusinessEntityID, FirstName, LastName
+FROM Person.Person
+WHERE BusinessEntityID NOT IN 
+	(SELECT BusinessEntityID
+	 FROM HumanResources.Employees) AND 
+		BusinessEntityID NOT IN(SELECT CustomerID
+		FROM Sales.Customer);
+
